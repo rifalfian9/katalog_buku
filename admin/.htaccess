@@ -1,0 +1,30 @@
+options All -Indexes
+
+RewriteEngine On 
+
+# login
+# RewriteRule ^([-a-z]*)-login=([-a-z]*)$ index.php?include=$1&gagal=$2 [L]
+RewriteRule ^([-a-z]*)$ index.php?include=$1 [L]
+
+RewriteRule ^([-a-z]*)-edit=([-a-z]*)-jenis=([-a-z]*)$ index.php?include=$1&edit=$2&jenis=$3 [L]
+
+RewriteRule ^([-a-z]*)-edit=([-a-z]*)$ index.php?include=$1&edit=$2 [L]
+RewriteRule ^([-a-z]*)-hapus=([-a-z]*)$ index.php?include=$1&hapus=$2 [L]
+RewriteRule ^([-a-z]*)-tambah=([-a-z]*)$ index.php?include=$1&tambah=$2 [L]
+
+# crud dengan id
+RewriteRule ^([-a-z]*)-idkb=([-0-9]*)$ index.php?include=$1&idkb=$2 [L]
+RewriteRule ^([-a-z]*)-idu=([-0-9]*)$ index.php?include=$1&idu=$2 [L]
+
+
+# ubah password
+RewriteRule ^([-a-z]*)-gagal=([-a-z]*)$ index.php?include=$1&gagal=$2 [L]
+RewriteRule ^([-a-z]*)-ganti=([-a-z]*)$ index.php?include=$1&ganti=$2 [L]
+
+# halaman
+RewriteRule ^([-a-z]*)-halaman=([-0-9]*)$ index.php?include=$1&halaman=$2 [L]
+
+#kategori 
+RewriteRule ^([-a-z]*)-nama=([-a-z]*)$ index.php?include=$1&nama=$2 [L]
+
+RewriteRule ^([-a-z]*)-edit=([-a-z]*)-tag=([-a-z])$ index.php?include=$1&edit=$2&tag=$3 [L]

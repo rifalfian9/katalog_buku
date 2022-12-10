@@ -1,0 +1,18 @@
+options All -Indexes
+
+RewriteEngine On 
+
+RewriteRule ^([-a-z]*)$ index.php?include=$1 [L]
+
+RewriteRule ^([-a-z]*)-kategori=([-a-zA-Z-0-9]*)$ index.php?include=$1&kategori=$2 [L]
+RewriteRule ^([-a-z]*)-kategori=([-a-zA-Z-0-9]*)-halaman=([-a-zA-Z-0-9]*)$ index.php?include=$1&kategori=$2&halaman=$3 [L]
+RewriteRule ^([-a-z]*)-idtag=([-a-zA-Z-0-9]*)-halaman=([-a-zA-Z-0-9]*)$ index.php?include=$1&idtag=$2&halaman=$3 [L]
+RewriteRule ^([-a-z]*)-kategoriblog=([-a-zA-Z-0-9]*)$ index.php?include=$1&kategoriblog=$2 [L]
+RewriteRule ^([-a-z]*)-arsip=([-a-zA-Z-0-9]*)$ index.php?include=$1&arsip=$2 [L]
+
+RewriteRule ^([-a-z]*)-idblog=([-0-9]*)$ index.php?include=$1&idblog=$2 [L]
+
+RewriteRule ^([-a-z]*)-idbuku=([-0-9]*)$ index.php?include=$1&idbuku=$2 [L]
+RewriteRule ^([-a-z]*)-idtag=([-0-9]*)$ index.php?include=$1&idtag=$2 [L]
+
+RewriteRule ^([-a-z]*)-idbuku=([-0-9]*)-kategor=([-a-zA-Z-0-9]*)$ index.php?include=$1&idbuku=$2&kategor=$3 [L]
